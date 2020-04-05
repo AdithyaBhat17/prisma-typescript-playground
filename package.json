@@ -1,0 +1,32 @@
+{
+  "name": "prisma-typescript-playground",
+  "version": "1.0.0",
+  "description": "prisma-typescript-playground",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdithyaBhat17/prisma-typescript-playground.git"
+  },
+  "author": "Adithya NR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdithyaBhat17/prisma-typescript-playground/issues"
+  },
+  "homepage": "https://github.com/AdithyaBhat17/prisma-typescript-playground#readme",
+  "devDependencies": {
+    "@prisma/cli": "^2.0.0-beta.1",
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.4",
+    "ts-node": "^8.8.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.0.0-beta.1",
+    "@types/node": "^13.11.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
