@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource sqlite {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model users {
+  address      String?
+  email        String?    @unique
+  name         String
+  password     String?
+  phone_number Int?
+  uid          String    @id
+  bookings     bookings[]
+}
+
+model bookings {
+  add_ons           String?
+  address           String
+  amount_paid       Int?
+  appartment        Int
+  bathrooms         Int
+  bedrooms          String
+  cleaning_type     String
+  date              DateTime
+  id                String  @id
+  payment_completed Boolean? @default(false)
+  phone_number      Int
+  time              String
+  uid              String?
+  users             users?   @relation(fields: [uid], references: [uid])
+}
+
+
